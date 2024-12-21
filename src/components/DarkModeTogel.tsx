@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
-function DarkModeToggle() {
+interface IDarkModeToggleProps {
+  className?: string;
+}
+
+function DarkModeToggle({ className }: IDarkModeToggleProps) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Check the saved mode in localStorage to persist the theme preference
@@ -28,7 +32,7 @@ function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="bg-blue-20 hover:bg-gray-500 text-white p-2 rounded"
+      className={`bg-blue-20 hover:bg-gray-500 text-white p-2 rounded ${className}`}
     >
       {isDarkMode ? <CiLight /> : <MdDarkMode />}
     </button>

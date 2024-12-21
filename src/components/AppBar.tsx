@@ -11,9 +11,9 @@ function Appbar() {
   };
 
   return (
-    <div className="pl-9 pr-9 p-5">
-      <div className="bg-stone-900 p-2 sticky transition duration-300 border rounded-full text-white">
-        <div className="max-w-2xl mx-auto flex items-center justify-between">
+    <div className="pl-9 pr-9 p-6">
+      <div className="bg-stone-900 p-2 transition duration-300 border rounded-full text-white">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
           <a href="#junaid" className="text-lg font-bold">
             Juniad_Husain
           </a>
@@ -60,7 +60,8 @@ function Appbar() {
           >
             ✖ {/* Close button */}
           </button>
-          <DarkModeToggle />
+          <DarkModeToggle className="ml-9 xl:'1.25rem'" />
+
           <nav className="flex flex-col space-y-4">
             <a
               href="#home"
