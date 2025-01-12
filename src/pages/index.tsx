@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
-      <Appbar />
+      {/* <Appbar /> */}
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

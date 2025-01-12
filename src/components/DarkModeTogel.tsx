@@ -32,7 +32,7 @@ function DarkModeToggle({ className }: IDarkModeToggleProps) {
   return (
     <button
       onClick={toggleDarkMode}
-      className={`bg-blue-20 hover:bg-gray-500 text-white p-2 rounded ${className}`}
+      className={`bg-blue-20 hover:bg-gray-500 hover:scale-125 text-white p-2 rounded ${className}`}
     >
       {isDarkMode ? <CiLight /> : <MdDarkMode />}
     </button>

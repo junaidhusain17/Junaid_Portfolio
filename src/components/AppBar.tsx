@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import DarkModeToggle from "./DarkModeTogel";
 
 function Appbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const sidebarRef = useRef(null); // Ref for the sidebar
 
   // Close the sidebar when clicked outside of it
   const toggleSidebar = () => {
@@ -11,10 +10,13 @@ function Appbar() {
   };
 
   return (
-    <div className="pl-9 pr-9 p-6">
-      <div className="bg-stone-900 p-2 transition duration-300 border rounded-full text-white">
+    <>
+      <div className="fixed left-9 right-9 rounded-full z-50 bg-stone-900 p-2 border text-white">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <a href="#junaid" className="text-lg font-bold">
+          <a
+            href="#junaid"
+            className="text-lg font-bold hover:scale-110 duration-300"
+          >
             Juniad_Husain
           </a>
           {/* Mobile toggle button */}
@@ -26,22 +28,22 @@ function Appbar() {
             {/* Toggle between 'X' and hamburger menu */}
           </button>
           {/* Navigation for larger screens */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex space-x-4 ">
             <a
               href="#home"
-              className="hover:text-background hover:font-bold duration-200 hover:scale-105 text-sm"
+              className="hover:scale-125 transition-transform duration-300"
             >
               Home
             </a>
             <a
               href="#about"
-              className="hover:text-background hover:font-bold duration-200 hover:scale-105 text-sm"
+              className="hover:scale-125 transition-transform duration-300"
             >
               About
             </a>
             <a
               href="#contact"
-              className="hover:text-background hover:font-bold duration-200 hover:scale-105 text-sm"
+              className="hover:scale-125 transition-transform duration-300"
             >
               Contact
             </a>
@@ -53,12 +55,12 @@ function Appbar() {
       </div>
       {/* Sidebar for mobile screens */}
       {sidebarOpen && (
-        <div className="bg-stone-900 fixed w-3/4  p-6 shadow-lg md:hidden rounded">
+        <div className="bg-stone-900 fixed w-3/4 p-6 md:hidden rounded top-16 left-1/2 -translate-x-1/2">
           <button
             onClick={toggleSidebar}
             className=" hover:text-gray-300 text-2xl mb-8"
           >
-            ✖ {/* Close button */}
+            ✖
           </button>
           <DarkModeToggle className="ml-9 xl:'1.25rem'" />
 
@@ -87,7 +89,7 @@ function Appbar() {
           </nav>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
