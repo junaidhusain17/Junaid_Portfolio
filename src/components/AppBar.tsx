@@ -14,7 +14,7 @@ function Appbar() {
       <div className="fixed left-9 right-9 rounded-full z-50 bg-stone-900 p-2 border text-white">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <a
-            href="#junaid"
+            href="../"
             className="text-lg font-bold hover:scale-110 duration-300"
           >
             Juniad_Husain
@@ -30,19 +30,19 @@ function Appbar() {
           {/* Navigation for larger screens */}
           <nav className="hidden md:flex space-x-4 ">
             <a
-              href="#home"
+              href="../"
               className="hover:scale-125 transition-transform duration-300"
             >
               Home
             </a>
             <a
-              href="#about"
+              href="../about"
               className="hover:scale-125 transition-transform duration-300"
             >
               About
             </a>
             <a
-              href="#contact"
+              href="../contact"
               className="hover:scale-125 transition-transform duration-300"
             >
               Contact

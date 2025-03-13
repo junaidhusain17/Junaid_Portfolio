@@ -8,18 +8,18 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ["en", "ur"], // Define supported languages
+    debug: false, // Enable debug mode
+    supportedLngs: ["en", "ur"], // Supported languages
     fallbackLng: "en", // Fallback language
     detection: {
       order: ["cookie", "localStorage", "path", "subdomain"],
-      caches: ["cookie"],
+      caches: ["cookie"], // Cache detected language in cookies
     },
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
-      // loadPath: "/locales/{{lng}}/translation.json", // Path to translation files
+      loadPath: "/locales/{{lng}}/translation.json", // Path to load translations
     },
     react: {
-      useSuspense: false, // Disable suspense for server-side rendering
+      useSuspense: false, // Disable suspense for SSR and static apps
     },
   });
 
